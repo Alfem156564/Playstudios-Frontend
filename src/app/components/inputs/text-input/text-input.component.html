@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label [attr.for]="id">{{label}}</label>
+    <input [type]="type" class="form-control" [id]="id" [placeholder]="placeholder" [formControl]="control">
+    <div *ngIf="control.touched && control.invalid" class="error">
+        {{getErrorMessage()}}
+    </div>
+</div>

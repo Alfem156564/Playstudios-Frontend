@@ -1,0 +1,28 @@
+<div class="auth-views-container">
+    <div class="d-lg-flex half">
+        <div class="bg order-1 order-md-2" style="background-image: url('assets/kingdomplaystudios.jpg');"></div>
+        <div class="contents order-2 order-md-1">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-7">
+                        <div class="mb-4">
+                            <h3>Sign up</h3>
+                            <p class="mb-4">Welcome to Alfem playstuidos basic sign up.</p>
+                        </div>
+                        <form [formGroup]="form" (ngSubmit)="createUser()">
+                            <app-text-input label="Name" placeholder="Alan" id="Name" type="text"
+                                [control]="form.get('name')"></app-text-input>
+                            <app-text-input label="LastName" placeholder="Meza" id="LastName" type="text"
+                                [control]="form.get('lastName')"></app-text-input>
+                            <app-text-input label="Email" placeholder="test@email.com" id="Email" type="text"
+                                [control]="form.get('email')"></app-text-input>
+                            <app-text-input label="Password" placeholder="********" id="Password" type="password"
+                                [control]="form.get('password')"></app-text-input>
+                            <input type="submit" value="Create" class="btn btn-block btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
